@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Portal | Planet Educare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-indigo-100 to-white text-gray-800 font-[Inter]">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Planet Educare</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-blue-600 transition, font-semibold">Home</a>
+        <a href="courses.html" class="hover:text-blue-600 transition, font-semibold">Courses</a>
+        <a href="about.html" class="hover:text-blue-600 transition, font-semibold">About</a>
+        <a href="Job Portal.html" class="text-blue-600 transition, font-semibold">Job Portal</a>
+        <a href="contact.html" class="hover:text-blue-600 transition, font-semibold">Contact</a>
+        <button onclick="toggleModal('demoModal')" class="ml-4 px-3 py-1 bg-yellow-400 rounded hover:bg-yellow-500 text-black">Free Demo</button>
+        <button onclick="toggleModal('registerModal')" class="ml-2 px-3 py-1 bg-green-500 rounded hover:bg-green-600 text-white">Register</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 px-4 bg-white">
+    <h2 class="text-4xl font-extrabold mb-4">Join Our Team</h2>
+    <p class="text-lg text-gray-600">We're always on the lookout for passionate, talented people to join us on our journey to educate the future.</p>
+  </section>
+
+  <!-- Job Openings -->
+  <section class="max-w-5xl mx-auto px-4 py-12">
+    <h3 class="text-2xl font-bold mb-8 text-center">Current Openings</h3>
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Job Card -->
+      <div class="border p-6 rounded-xl shadow hover:shadow-md transition">
+        <h4 class="text-xl font-semibold mb-2">Tally Trainer</h4>
+        <p class="text-gray-700 mb-1">Location: Bhubaneswar, Odisha</p>
+        <p class="text-gray-600 mb-4">We're looking for an experienced Tally trainer to lead sessions for students and working professionals.</p>
+        <a href="mailto:hr@planeteducare.com" class="text-indigo-600 font-semibold hover:underline">Apply Now</a>
+      </div>
+
+      <!-- Add more job cards below -->
+
+      <div class="border p-6 rounded-xl shadow hover:shadow-md transition">
+        <h4 class="text-xl font-semibold mb-2">Digital Marketing Executive</h4>
+        <p class="text-gray-700 mb-1">Location: Remote</p>
+        <p class="text-gray-600 mb-4">Help us build our brand and reach more learners through SEO, content, and social media.</p>
+        <a href="mailto:hr@planeteducare.com" class="text-indigo-600 font-semibold hover:underline">Apply Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="sticky top-0 z-50 shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black py-6 text-center">
+  © 2025 Your Company Name. All rights reserved.
+</footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Planet Educare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 via-sky-100 to-emerald-100 text-gray-800 font-[Inter]">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Planet Educare</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-blue-600 transition, font-semibold">Home</a>
+        <a href="courses.html" class="hover:text-blue-600 transition, font-semibold">Courses</a>
+        <a href="about.html" class="hover:text-blue-600 transition, font-semibold">About</a>
+        <a href="Job Portal.html" class="hover:text-blue-600 transition, font-semibold">Job Portal</a>
+        <a href="contact.html" class="text-yellow-300 font-semibold">Contact</a>
+        <button onclick="toggleModal('demoModal')" class="ml-4 px-3 py-1 bg-yellow-400 rounded hover:bg-yellow-500 text-black">Free Demo</button>
+        <button onclick="toggleModal('registerModal')" class="ml-2 px-3 py-1 bg-green-500 rounded hover:bg-green-600 text-white">Register</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Content Container -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto bg-white p-10 rounded-2xl shadow-lg">
+      <h2 class="text-4xl font-bold mb-10 text-center" id="headline">Get in Touch</h2>
+      <form class="space-y-6">
+        <div>
+          <label class="block mb-1 font-semibold">Full Name</label>
+          <input type="text" placeholder="Enter your name" class="w-full border px-4 py-3 rounded-md" required>
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold">Email</label>
+          <input type="email" placeholder="Enter your email" class="w-full border px-4 py-3 rounded-md" required>
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold">Message</label>
+          <textarea placeholder="Your message..." class="w-full border px-4 py-3 rounded-md h-32" required></textarea>
+        </div>
+        <button class="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button onclick="scrollToTop()" class="fixed bottom-6 right-6 bg-indigo-600 text-white p-3 rounded-full shadow-md hover:bg-indigo-700">
+    ↑
+  </button>
+
+  <!-- Footer -->
+  <footer class="sticky top-0 z-50 shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black py-6 text-center">
+  © 2025 Your Company Name. All rights reserved.
+</footer>
+
+  <!-- Modals -->
+  <div id="demoModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-xl w-full max-w-md">
+      <h3 class="text-xl font-bold mb-4">Free Demo Class</h3>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full border px-3 py-2 rounded" required />
+        <input type="email" placeholder="Your Email" class="w-full border px-3 py-2 rounded" required />
+        <button class="bg-yellow-400 px-4 py-2 rounded w-full hover:bg-yellow-500">Book Demo</button>
+      </form>
+      <button onclick="toggleModal('demoModal')" class="mt-4 text-indigo-600 hover:underline">Close</button>
+    </div>
+  </div>
+
+  <div id="registerModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-xl w-full max-w-md">
+      <h3 class="text-xl font-bold mb-4">Register Now</h3>
+      <form class="space-y-4">
+        <input type="text" placeholder="Full Name" class="w-full border px-3 py-2 rounded" required />
+        <input type="email" placeholder="Email" class="w-full border px-3 py-2 rounded" required />
+        <input type="tel" placeholder="Phone Number" class="w-full border px-3 py-2 rounded" required />
+        <button class="bg-green-500 text-white px-4 py-2 rounded w-full hover:bg-green-600">Register</button>
+      </form>
+      <button onclick="toggleModal('registerModal')" class="mt-4 text-indigo-600 hover:underline">Close</button>
+    </div>
+  </div>
+
+  <!-- ScrollReveal -->
+  <script>
+    ScrollReveal().reveal('#headline', { delay: 200, distance: '20px', origin: 'bottom' });
+  </script>
+
+  <!-- Modal Toggle & ScrollTop -->
+  <script>
+    function toggleModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.toggle('hidden');
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
