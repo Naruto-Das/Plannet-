@@ -16,34 +16,43 @@
   id="mainHeader"
   class="sticky top-0 z-50 shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black"
 >
+<div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Logo + Title -->
+    <div class="flex items-center">
+      <img src="Logo-2.png" alt="Planet Educare Logo" class="h-12 w-auto mr-3" />
+      <h1 class="text-2xl font-bold">Planet Educare</h1>
+    </div>
 
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-  <!-- Logo + Title -->
-  <div class="flex items-center">
-    <img src="Logo-2.png" alt="Planet Educare Logo" class="h-12 w-auto mr-3" />
-    <h1 class="text-2xl font-bold">Planet Educare</h1>
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center space-x-4 font-medium">
+      <a href="index.html" class="text-blue-600 transition font-semibold">Home</a>
+      <a href="courses.html" class="hover:text-blue-600 transition font-semibold">Courses</a>
+      <a href="about.html" class="hover:text-blue-600 transition font-semibold">About</a>
+      <a href="Job Portal.html" class="hover:text-blue-600 transition font-semibold">Job Portal</a>
+      <a href="contact.html" class="hover:text-blue-600 transition font-semibold">Contact</a>
+      <button onclick="toggleModal('demoModal')" class="ml-4 px-3 py-1 bg-yellow-400 rounded hover:bg-yellow-500 text-black">Free Demo</button>
+      <button onclick="toggleModal('registerModal')" class="ml-2 px-3 py-1 bg-green-500 rounded hover:bg-green-600 text-white">Register</button>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="md:hidden flex items-center px-3 py-2 border rounded text-indigo-600 border-indigo-600 hover:text-indigo-800 hover:border-indigo-800"
+      onclick="toggleMenu()"
+      aria-label="Toggle menu"
+    >
+      <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <title>Menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+      </svg>
+    </button>
   </div>
-
-  <!-- Desktop Navigation -->
-  <nav class="hidden md:flex items-center space-x-4 font-medium">
-    <a href="index.html" class="text-blue-600 transition, font-semibold">Home</a>
-    <a href="courses.html" class="hover:text-blue-600 transition, font-semibold">Courses</a>
-    <a href="about.html" class="hover:text-blue-600 transition, font-semibold">About</a>
-    <a href="Job Portal.html" class="hover:text-blue-600 transition, font-semibold">Job Portal</a>
-    <a href="contact.html" class="hover:text-blue-600 transition, font-semibold">Contact</a>
-    <button onclick="toggleModal('demoModal')" class="ml-4 px-3 py-1 bg-yellow-400 rounded hover:bg-yellow-500 text-black">Free Demo</button>
-    <button onclick="toggleModal('registerModal')" class="ml-2 px-3 py-1 bg-green-500 rounded hover:bg-green-600 text-white">Register</button>
-  </nav>
-</div>
-
-
   <!-- Mobile Navigation -->
   <div id="mobileMenu" class="md:hidden px-4 py-4 hidden flex-col space-y-2 bg-white shadow-lg">
-    <a href="index.html" class="text-blue-600 transition, font-semibold">Home</a>
-    <a href="courses.html" class="hover:text-blue-600 transition">Courses</a>
-    <a href="about.html" class="hover:text-blue-600 transition">About</a>
-    <a href="Job Portal.html" class="hover:text-blue-600 transition">Job Portal</a>
-    <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+    <a href="index.html" class="text-blue-600 transition font-semibold">Home</a>
+    <a href="courses.html" class="hover:text-blue-600 transition font-semibold">Courses</a>
+    <a href="about.html" class="hover:text-blue-600 transition font-semibold">About</a>
+    <a href="Job Portal.html" class="hover:text-blue-600 transition font-semibold">Job Portal</a>
+    <a href="contact.html" class="hover:text-blue-600 transition font-semibold">Contact</a>
     <button onclick="toggleModal('demoModal')" class="w-full bg-yellow-400 text-black py-2 rounded hover:bg-yellow-500">Free Demo</button>
     <button onclick="toggleModal('registerModal')" class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">Register</button>
   </div>
