@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Material | Planet Educare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F9FAFB] text-gray-800 font-[Inter]">
+
+  <!-- Header (You can reuse the same from your other pages) -->
+  <header 
+  id="mainHeader"
+  class="sticky top-0 z-50 shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black"
+>
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Planet Educare</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-blue-600 transition font-semibold">Home</a>
+        <a href="courses.html" class="hover:text-blue-600 transition font-semibold">Courses</a>
+        <a href="careers.html" class="hover:text-blue-600 transition font-semibold">Careers</a>
+        <a href="contact.html" class="hover:text-blue-600 transition font-semibold">Contact</a>
+        <a href="study-material.html" class="text-blue-600 transition font-semibold">Study Material</a>
+        <button onclick="toggleModal('demoModal')" class="ml-4 px-3 py-1 bg-yellow-400 rounded hover:bg-yellow-500 text-black">Free Demo</button>
+      </nav>
+
+      
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 py-20 text-center px-4">
+    <h2 class="text-4xl font-bold mb-4">Free Study Material</h2>
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto">Access downloadable resources, notes, PDFs, assignments, and reference materials prepared by our expert trainers.</p>
+  </section>
+
+  <!-- Study Material List -->
+  <section class="max-w-5xl mx-auto py-16 px-4">
+    <h3 class="text-2xl font-semibold mb-6">Available Materials</h3>
+    <ul class="space-y-4">
+      <li class="bg-white p-4 rounded shadow hover:shadow-md transition">
+        <h4 class="text-lg font-bold">Tally Notes (PDF)</h4>
+        <a href="#" class="text-blue-600 hover:underline">Download</a>
+      </li>
+      <li class="bg-white p-4 rounded shadow hover:shadow-md transition">
+        <h4 class="text-lg font-bold">Digital Marketing Guide</h4>
+        <a href="#" class="text-blue-600 hover:underline">Download</a>
+      </li>
+      <li class="bg-white p-4 rounded shadow hover:shadow-md transition">
+        <h4 class="text-lg font-bold">Interview Preparation Tips</h4>
+        <a href="#" class="text-blue-600 hover:underline">Download</a>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="sticky top-0 z-50 shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black py-6 text-center">
+  © 2025 Planet Educare. All rights reserved.
+</footer>
+
+</body>
+</html>

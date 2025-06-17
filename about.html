@@ -4,58 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - Planet Educare</title>
+  <link rel="icon" type="image/png" href="Logo-2.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-<body class="bg-white text-gray-800 font-[Inter]">
+<body class="bg-white text-gray-800 font-[Inter] flex flex-col min-h-screen"
+  
   <!-- Header -->
-  <header class="sticky top-0 z-50 shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black">
+  <header class="sticky top-0 z-50 shadow bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold">Planet Educare</h1>
       <nav class="space-x-6">
-        <a href="index.html" class="hover:text-blue-600 transition, font-semibold">Home</a>
-        <a href="courses.html" class="hover:text-blue-600 transition, font-semibold">Courses</a>
-        <a href="about.html" class="text-blue-600 transition, font-semibold">About</a>
-        <a href="Job Portal.html" class="hover:text-blue-600 transition, font-semibold">Job Portal</a>
-        <a href="contact.html" class="hover:text-blue-600 transition, font-semibold">Contact</a>
+        <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
+        <a href="courses.html" class="hover:text-blue-600 font-semibold">Courses</a>
+        <a href="about.html" class="text-blue-600 font-semibold">About</a>
+        <a href="Job Portal.html" class="hover:text-blue-600 font-semibold">Job Portal</a>
+        <a href="contact.html" class="hover:text-blue-600 font-semibold">Contact</a>
+        <a href="study-material.html" class="hover:text-blue-600 transition font-semibold">Study Material</a>
         <button onclick="toggleModal('demoModal')" class="ml-4 px-3 py-1 bg-yellow-400 rounded hover:bg-yellow-500 text-black">Free Demo</button>
-        <button onclick="toggleModal('registerModal')" class="ml-2 px-3 py-1 bg-green-500 rounded hover:bg-green-600 text-white">Register</button>
       </nav>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section class="py-20 px-4 bg-gray-50">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-6" id="headline">About Planet Educare</h2>
-      <p class="text-lg mb-8">Planet Educare is committed to empowering individuals through quality education and training. With expert faculty, innovative methods, and a nurturing environment, we help learners unlock their full potential.</p>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 bg-white shadow-lg rounded-xl" id="feature1">
-          <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
-          <p>To provide affordable, high-quality education that transforms lives and strengthens communities.</p>
-        </div>
-        <div class="p-6 bg-white shadow-lg rounded-xl" id="feature2">
-          <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
-          <p>To be a leading educational hub known for nurturing talent and fostering lifelong learning.</p>
-        </div>
-        <div class="p-6 bg-white shadow-lg rounded-xl" id="feature3">
-          <h3 class="text-xl font-semibold mb-2">Why Choose Us</h3>
-          <p>We blend modern teaching techniques with personal mentorship, practical exposure, and community impact.</p>
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- About Section -->
+    <section class="py-20 px-4 bg-gray-50">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6" id="headline">About Planet Educare</h2>
+        <p class="text-lg mb-8">People with poor English-speaking abilities who wish to move ahead in life or who aspire to take abroad work projects have benefited the most from our English Proficiency Programs. The education and knowledge offered at our institute are rendered by a team of highly experienced, talented, and expert linguists who are well-versed.</p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white shadow-lg rounded-xl" id="feature1">
+            <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+            <p>To provide affordable, high-quality education that transforms lives and strengthens communities.</p>
+          </div>
+          <div class="p-6 bg-white shadow-lg rounded-xl" id="feature2">
+            <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+            <p>To be a leading educational hub known for nurturing talent and fostering lifelong learning.</p>
+          </div>
+          <div class="p-6 bg-white shadow-lg rounded-xl" id="feature3">
+            <h3 class="text-xl font-semibold mb-2">Why Choose Us</h3>
+            <p>We blend modern teaching techniques with personal mentorship, practical exposure, and community impact.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black py-6 text-center">
+    © 2025 Planet Educare. All rights reserved.
+  </footer>
 
   <!-- Back to Top Button -->
   <button onclick="scrollToTop()" class="fixed bottom-6 right-6 bg-indigo-600 text-white p-3 rounded-full shadow-md hover:bg-indigo-700">
     ↑
   </button>
-
-  <footer class="sticky top-0 z-50 shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black py-6 text-center">
-  © 2025 Your Company Name. All rights reserved.
-</footer>
 
   <!-- Modals -->
   <div id="demoModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">

@@ -4,12 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Planet Educare</title>
+  <link rel="icon" type="image/png" href="Logo-2.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body class="bg-white text-gray-800 font-[Inter]">
+
+  <!-- Top Info Bar -->
+<div class="bg-indigo-600 text-white text-sm">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+    <!-- Left: Contact Info -->
+    <div class="flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-6">
+      <div class="flex items-center space-x-1">
+        <i class="ph ph-phone-call"></i>
+        <span>9547240095 / 8436494077</span>
+      </div>
+      <div class="flex items-center space-x-1">
+        <i class="ph ph-envelope-simple"></i>
+        <span>planeteducare2023@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- Right: Social Icons -->
+    <div class="flex items-center space-x-3 text-lg">
+      <a href="https://facebook.com" target="_blank" class="hover:text-yellow-300"><i class="ph ph-facebook-logo"></i></a>
+      <a href="https://instagram.com" target="_blank" class="hover:text-yellow-300"><i class="ph ph-instagram-logo"></i></a>
+      <a href="https://youtube.com" target="_blank" class="hover:text-yellow-300"><i class="ph ph-youtube-logo"></i></a>
+    </div>
+  </div>
+</div>
+  
 
   <!-- Header -->
 <header 
@@ -24,14 +50,14 @@
     </div>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden md:flex items-center space-x-4 font-medium">
+     <nav class="space-x-6">
       <a href="index.html" class="text-blue-600 transition font-semibold">Home</a>
       <a href="courses.html" class="hover:text-blue-600 transition font-semibold">Courses</a>
       <a href="about.html" class="hover:text-blue-600 transition font-semibold">About</a>
       <a href="Job Portal.html" class="hover:text-blue-600 transition font-semibold">Job Portal</a>
       <a href="contact.html" class="hover:text-blue-600 transition font-semibold">Contact</a>
+      <a href="study-material.html" class="hover:text-blue-600 transition font-semibold">Study Material</a>
       <button onclick="toggleModal('demoModal')" class="ml-4 px-3 py-1 bg-yellow-400 rounded hover:bg-yellow-500 text-black">Free Demo</button>
-      <button onclick="toggleModal('registerModal')" class="ml-2 px-3 py-1 bg-green-500 rounded hover:bg-green-600 text-white">Register</button>
     </nav>
 
     <!-- Mobile Menu Button -->
@@ -166,7 +192,7 @@
 
   <!-- Footer -->
 <footer class="sticky top-0 z-50 shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black py-6 text-center">
-  © 2025 Your Company Name. All rights reserved.
+  © 2025 Planet Educare. All rights reserved.
 </footer>
 
 

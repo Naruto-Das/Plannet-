@@ -4,22 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Job Portal | Planet Educare</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Logo-2.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-b from-indigo-100 to-white text-gray-800 font-[Inter]">
+
   <!-- Header -->
   <header class="sticky top-0 z-50 shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold">Planet Educare</h1>
       <nav class="space-x-6">
-        <a href="index.html" class="hover:text-blue-600 transition, font-semibold">Home</a>
-        <a href="courses.html" class="hover:text-blue-600 transition, font-semibold">Courses</a>
-        <a href="about.html" class="hover:text-blue-600 transition, font-semibold">About</a>
-        <a href="Job Portal.html" class="text-blue-600 transition, font-semibold">Job Portal</a>
-        <a href="contact.html" class="hover:text-blue-600 transition, font-semibold">Contact</a>
+        <a href="index.html" class="hover:text-blue-600 font-semibold">Home</a>
+        <a href="courses.html" class="hover:text-blue-600 font-semibold">Courses</a>
+        <a href="about.html" class="hover:text-blue-600 font-semibold">About</a>
+        <a href="Job Portal.html" class="text-blue-600 font-semibold">Job Portal</a>
+        <a href="contact.html" class="hover:text-blue-600 font-semibold">Contact</a>
+        <a href="study-material.html" class="hover:text-blue-600 transition font-semibold">Study Material</a>
         <button onclick="toggleModal('demoModal')" class="ml-4 px-3 py-1 bg-yellow-400 rounded hover:bg-yellow-500 text-black">Free Demo</button>
-        <button onclick="toggleModal('registerModal')" class="ml-2 px-3 py-1 bg-green-500 rounded hover:bg-green-600 text-white">Register</button>
       </nav>
     </div>
   </header>
@@ -33,31 +35,134 @@
   <!-- Job Openings -->
   <section class="max-w-5xl mx-auto px-4 py-12">
     <h3 class="text-2xl font-bold mb-8 text-center">Current Openings</h3>
-    <div class="grid md:grid-cols-2 gap-8">
-
-      <!-- Job Card -->
-      <div class="border p-6 rounded-xl shadow hover:shadow-md transition">
-        <h4 class="text-xl font-semibold mb-2">Tally Trainer</h4>
-        <p class="text-gray-700 mb-1">Location: Bhubaneswar, Odisha</p>
-        <p class="text-gray-600 mb-4">We're looking for an experienced Tally trainer to lead sessions for students and working professionals.</p>
-        <a href="mailto:hr@planeteducare.com" class="text-indigo-600 font-semibold hover:underline">Apply Now</a>
-      </div>
-
-      <!-- Add more job cards below -->
-
-      <div class="border p-6 rounded-xl shadow hover:shadow-md transition">
-        <h4 class="text-xl font-semibold mb-2">Digital Marketing Executive</h4>
-        <p class="text-gray-700 mb-1">Location: Remote</p>
-        <p class="text-gray-600 mb-4">Help us build our brand and reach more learners through SEO, content, and social media.</p>
-        <a href="mailto:hr@planeteducare.com" class="text-indigo-600 font-semibold hover:underline">Apply Now</a>
-      </div>
-
-    </div>
+    <div id="job-container" class="grid md:grid-cols-2 gap-8 text-left"></div>
   </section>
 
+  <!-- Application Form Modal (hidden by default) -->
+  <div id="applyModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg max-w-lg w-full p-6 relative shadow-lg">
+      <button onclick="closeModal('applyModal')" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 font-bold text-xl">&times;</button>
+      <h3 class="text-2xl font-bold mb-4">Apply for <span id="modalJobTitle"></span></h3>
+      <form id="applicationForm" class="space-y-4" enctype="multipart/form-data">
+        <input type="hidden" name="jobName" id="jobNameInput" />
+        <div>
+          <label class="block mb-1 font-semibold" for="fullName">Full Name</label>
+          <input required type="text" id="fullName" name="fullName" class="w-full border border-gray-300 rounded px-3 py-2" />
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold" for="email">Email</label>
+          <input required type="email" id="email" name="email" class="w-full border border-gray-300 rounded px-3 py-2" />
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold" for="phone">Phone Number</label>
+          <input required type="tel" id="phone" name="phone" class="w-full border border-gray-300 rounded px-3 py-2" />
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold" for="resume">Upload Resume (PDF, DOC)</label>
+          <input required type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" class="w-full" />
+        </div>
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-semibold">Submit Application</button>
+      </form>
+      <div id="formMessage" class="mt-4 text-center text-green-600 font-semibold hidden"></div>
+    </div>
+  </div>
+
   <!-- Footer -->
-  <footer class="sticky top-0 z-50 shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black py-6 text-center">
-  © 2025 Your Company Name. All rights reserved.
-</footer>
+  <footer class="shadow transition-shadow duration-300 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-100 text-black py-6 text-center">
+    © 2025 Planet Educare. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const jobs = [
+      {
+        title: "Tally Trainer",
+        location: "Bhubaneswar, Odisha",
+        description: "We're looking for an experienced Tally trainer to lead sessions for students and working professionals.",
+        email: "hr@planeteducare.com"
+      },
+      {
+        title: "Digital Marketing Executive",
+        location: "Remote",
+        description: "Help us build our brand and reach more learners through SEO, content, and social media.",
+        email: "hr@planeteducare.com"
+      },
+      {
+        title: "Graphic Designer",
+        location: "Bhubaneswar (On-Site)",
+        description: "Design creatives, banners, and promotional material for digital and print.",
+        email: "hr@planeteducare.com"
+      },
+      {
+        title: "Tele Caller Executive",
+        location: "Kolkata",
+        description: "engaging with customers, both existing and potential, via phone to promote products or services, generate leads, or handle customer inquiries",
+        email: "hr@planeteducare.com"
+      }
+      
+    ];
+
+    const jobContainer = document.getElementById('job-container');
+
+    if (jobs.length === 0) {
+      jobContainer.innerHTML = `<p class="text-center text-gray-500 col-span-2">No current openings. Please check back later.</p>`;
+    } else {
+      jobs.forEach((job, index) => {
+        jobContainer.innerHTML += `
+          <div class="border p-6 rounded-xl shadow hover:shadow-md transition bg-white">
+            <h4 class="text-xl font-semibold mb-2">${job.title}</h4>
+            <p class="text-gray-700 mb-1">Location: ${job.location}</p>
+            <p class="text-gray-600 mb-4">${job.description}</p>
+            <button
+              class="text-indigo-600 font-semibold hover:underline cursor-pointer"
+              onclick="openApplyModal(${index})"
+            >Apply Now</button>
+          </div>
+        `;
+      });
+    }
+
+    // Open modal and fill job title
+    function openApplyModal(index) {
+      const job = jobs[index];
+      document.getElementById('modalJobTitle').textContent = job.title;
+      document.getElementById('jobNameInput').value = job.title;
+      document.getElementById('applyModal').classList.remove('hidden');
+      document.getElementById('formMessage').classList.add('hidden');
+      document.getElementById('applicationForm').reset();
+    }
+
+    // Close modal
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+
+    // Handle form submission
+    document.getElementById('applicationForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+
+      try {
+        // Replace URL with your backend endpoint once ready
+        const response = await fetch('http://localhost:3000/apply', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (response.ok) {
+          document.getElementById('formMessage').textContent = 'Application submitted successfully!';
+          document.getElementById('formMessage').classList.remove('hidden');
+          form.reset();
+        } else {
+          const data = await response.json();
+          alert('Failed to submit: ' + (data.message || 'Unknown error'));
+        }
+      } catch (error) {
+        alert('Error submitting application: ' + error.message);
+      }
+    });
+  </script>
+
 </body>
 </html>
